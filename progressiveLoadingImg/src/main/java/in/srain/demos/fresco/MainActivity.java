@@ -1,0 +1,41 @@
+package in.srain.demos.fresco;
+
+import android.app.Activity;
+import android.net.Uri;
+import android.os.Bundle;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
+
+public class MainActivity extends Activity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_activity);
+
+        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(R.id.logo_image);
+        Uri lowResUri = Uri.parse("http://u4.tdimg.com/7/147/82/31804659546604080410941337579323207967.jpg");
+        simpleDraweeView.setImageURI(lowResUri);
+
+        SimpleDraweeView progressivePic = (SimpleDraweeView) findViewById(R.id.progressive);
+        //Uri aniImageUri = Uri.parse("https://camo.githubusercontent.com/588a2ef2cdcfb6c71e88437df486226dd15605b3/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672d61727261792e676966");
+        //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/king_pro.jpg");
+        //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_0097_pro.JPG");
+        //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_0097_HD1080_pro.jpg");
+       // Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_final.JPG");
+        //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_final_pro.JPG");
+        Uri proImageUri = Uri.parse("http://images.shigeten.net/images/DSC_final_pro.JPG");
+        ImageRequest request = ImageRequestBuilder.newBuilderWithSource(proImageUri)
+                .setProgressiveRenderingEnabled(true)
+                .build();
+
+        DraweeController controller = Fresco.newDraweeControllerBuilder()
+                .setImageRequest(request)
+                .setOldController(progressivePic.getController())
+                .build();
+        progressivePic.setController(controller);
+    }
+}
