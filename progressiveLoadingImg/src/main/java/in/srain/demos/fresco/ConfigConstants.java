@@ -8,6 +8,11 @@ import com.facebook.common.util.ByteConstants;
 public class ConfigConstants {
     private static final int MAX_HEAP_SIZE = (int) Runtime.getRuntime().maxMemory();
 
-    public static final int MAX_DISK_CACHE_SIZE = 40 * ByteConstants.MB;
-    public static final int MAX_MEMORY_CACHE_SIZE = MAX_HEAP_SIZE / 4;
+//    public static final int MAX_DISK_CACHE_SIZE = 40 * ByteConstants.MB;
+//    public static final int MAX_MEMORY_CACHE_SIZE = MAX_HEAP_SIZE / 4;
+    /*  modify by sminger
+        the following setting is for evict the cache.
+     */
+    public static final int MAX_DISK_CACHE_SIZE = ByteConstants.MB;
+    public static final int MAX_MEMORY_CACHE_SIZE =ByteConstants.MB;
 }

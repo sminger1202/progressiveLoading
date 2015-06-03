@@ -25,7 +25,7 @@ public class DemoApp extends Application {
             @Override
             public int getNextScanNumberToDecode(int scanNumber) {
                 Log.i("ssss", "ddddddd  scanNumber :" + scanNumber);
-                return scanNumber + 1;
+                return scanNumber + 2;
             }
 
             @Override
@@ -43,6 +43,7 @@ public class DemoApp extends Application {
         // Fresco.initialize(this);
 
         Fresco.initialize(this, ImagePipelineConfig);
+        Fresco.getImagePipeline();
     }
 
         /**
