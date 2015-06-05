@@ -185,8 +185,10 @@ containing a value of this type.
         public static final int white=0x7f030001;
     }
     public static final class id {
+        public static final int clearCache=0x7f050002;
         public static final int logo_image=0x7f050000;
         public static final int progressive=0x7f050001;
+        public static final int reload=0x7f050003;
     }
     public static final class layout {
         public static final int main_activity=0x7f020000;

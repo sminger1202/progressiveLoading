@@ -11,15 +11,29 @@
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="20dp"/>
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/progressive"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/logo_image"
+        android:layout_height="350dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below ="@+id/progressive"
+        android:text="Clear cache"
+        android:id="@+id/clearCache"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below ="@+id/clearCache"
+        android:text="Reload"
+        android:id="@+id/reload"
+        />
 
 </RelativeLayout>
 <!-- From: file:/home/sminger/workspace/trunk/progressiveLoadingImg/src/main/res/layout/main_activity.xml -->
