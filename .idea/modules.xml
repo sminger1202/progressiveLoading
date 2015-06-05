@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/myprogressivedemo.iml" filepath="$PROJECT_DIR$/myprogressivedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/progressiveLoadingImg/progressiveLoadingImg.iml" filepath="$PROJECT_DIR$/progressiveLoadingImg/progressiveLoadingImg.iml" />
+    </modules>
+  </component>
+</project>
