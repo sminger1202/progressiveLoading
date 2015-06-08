@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
     //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/king_pro.jpg");
     //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_0097_pro.JPG");
     //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_0097_HD1080_pro.jpg");
-    //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_final.JPG");
     //Uri proImageUri = Uri.parse("http://192.168.1.135:8080/image/DSC_final_pro.JPG");
     final Uri proImageUri =Uri.parse("http://pooyak.com/p/progjpeg/jpegload.cgi?o=1"); // the best image to show loading progressive.
     final Uri lowResUri = Uri.parse("http://u4.tdimg.com/7/147/82/31804659546604080410941337579323207967.jpg");
@@ -121,7 +120,7 @@ public class MainActivity extends Activity {
             File[] filelist = file.listFiles();
             for (int i = 0; i < filelist.length; ++i) {
                 count += this.clearCache(filelist[i]);
-                file.getFreeSpace();
+                //file.getFreeSpace();
             }
         } else {
             if (file.exists()) {
